@@ -2,7 +2,7 @@
 
 ###
 
-![](https://drive.google.com/file/d/1DwkJ6xGTyqa73edJWpU53-NqXhSSXQOv/view)
+https://drive.google.com/file/d/1DwkJ6xGTyqa73edJWpU53-NqXhSSXQOv/view
 
 <br>
 
