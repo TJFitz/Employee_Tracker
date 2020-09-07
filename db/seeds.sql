@@ -15,9 +15,6 @@ INSERT INTO department
 VALUES
     ("Customer Support");
 
-
-
-
 INSERT INTO role
     (title, salary, department_id)
 VALUES
@@ -29,13 +26,7 @@ VALUES
 INSERT INTO role
     (title, salary, department_id)
 VALUES
-    ("Shipping Manager", 400000, 3);
-INSERT INTO role
-    (title, salary, department_id)
-VALUES
-    ("Customer Bitch Lead", 1000, 4);
-
-
+    ("Shipping Manager", 200000, 3);
 
 INSERT INTO employee
     (first_name, last_name, role_id)
@@ -44,12 +35,5 @@ VALUES
 INSERT INTO employee
     (first_name, last_name, role_id, manager_id)
 VALUES
-    ("Jimmy", "Neutron", 2, 1);
-INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
-VALUES
-    ("Deez", "Nutz", 3, 1);
-INSERT INTO employee
-    (first_name, last_name, role_id, manager_id)
-VALUES
-    ("Ligma", "Balls", 4, 1);
+    ("John", "Fisherman", 2, 1);
+

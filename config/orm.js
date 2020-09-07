@@ -1,6 +1,13 @@
 const conn = require("./connection");
 
 const orm = {
+  viewTableBy: function (table, condition, cb) {
+    let queryString = "SELECT * FROM ?? WHERE ?";
+    conn.query(queryString, [table, condition], (err, res) => {
+      if (err) throw err;
+      cb(res);
+    });
+  },
   addDepartment: function (table, name, cb) {
     let queryString = "INSERT INTO ?? (name) VALUES (?)";
     conn.query(queryString, [table, name], (err, res) => {
@@ -24,9 +31,30 @@ const orm = {
       cb(res);
     });
   },
-  viewTableBy: function (table, condition, cb) {
-    let queryString = "SELECT * FROM ?? WHERE ?";
-    conn.query(queryString, [table, condition], (err, res) => {
+  removeDepartment: function (id, cb) {
+    let queryString = "DELETE FROM department WHERE id = ?";
+    conn.query(queryString, [id], (err, res) => {
+      if (err) throw err;
+      cb(res);
+    });
+  },
+  removeRole: function (id, cb) {
+    let queryString = "DELETE FROM role WHERE id = ?";
+    conn.query(queryString, [id], (err, res) => {
+      if (err) throw err;
+      cb(res);
+    });
+  },
+  removeEmployee: function (id, cb) {
+    let queryString = "DELETE FROM employee WHERE id = ?";
+    conn.query(queryString, [id], (err, res) => {
+      if (err) throw err;
+      cb(res);
+    });
+  },
+  updateRole: function (newRole, id, cb) {
+    let queryString = "UPDATE employee SET role_id = ? WHERE id = ?";
+    conn.query(queryString, [newRole, id], (err, res) => {
       if (err) throw err;
       cb(res);
     });
